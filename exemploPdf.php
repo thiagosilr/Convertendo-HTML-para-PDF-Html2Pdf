@@ -3,7 +3,7 @@
 include('html2pdf/html2pdf.class.php');
  
 $html = '
-<link rel="stylesheet" type="text/css" href="exemploPdf.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
  
 <div id="logo"></div>
 <span id="texto">HTML2PDF</span>
@@ -15,7 +15,8 @@ $html = '
 	</tr>
 </table>
 
-<img src="http://localhost/Convertendo-HTML-para-PDF-Html2Pdf/imagemJpegDinamica.php?cor=1" />';
+<!-- Imagem gerada dinamicamente -->
+<img src="http://localhost/Convertendo-HTML-para-PDF-Html2Pdf/img/imagemJpegDinamica.php?cor=1" />';
  
 # Converte o html para pdf.
 try
