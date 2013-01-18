@@ -9,7 +9,7 @@ $html = '
 # Converte o html para pdf.
 try
 {
-    $html2pdf = new HTML2PDF('P', 'A4', 'pt', false, 'UTF-8', 2);
+    $html2pdf = new HTML2PDF('P', 'A4', 'pt', true, 'UTF-8', 2);
      
     # Passamos o html que queremos converte.
     $html2pdf->writeHTML($html); 

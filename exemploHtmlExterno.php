@@ -8,7 +8,7 @@ $html = file_get_contents('http://localhost/Convertendo-HTML-para-PDF-Html2Pdf/h
 # Converte o HTML para PDF.
 try
 {
-    $html2pdf = new HTML2PDF('P', 'A4', 'pt', false, 'UTF-8', 2);
+    $html2pdf = new HTML2PDF('P', 'A4', 'pt', true, 'UTF-8', 2);
      
     # Passamos o html que queremos converte.
     $html2pdf->writeHTML($html); 

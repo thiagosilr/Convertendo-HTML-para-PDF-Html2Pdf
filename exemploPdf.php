@@ -44,7 +44,7 @@ try
      *   array(5,5,5,8));
      * Sendo que a primeira posição do array representa a margem esquerda depois      
      * topo, direita e rodapé. */
-    $html2pdf = new HTML2PDF('P','A4','pt', false, 'UTF-8', 2);
+    $html2pdf = new HTML2PDF('P','A4','pt', true, 'UTF-8', 2);
      
     # Passamos o html que queremos converte.
     $html2pdf->writeHTML($html); 
