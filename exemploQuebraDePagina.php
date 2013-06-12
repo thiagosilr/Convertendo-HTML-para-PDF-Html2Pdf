@@ -3,17 +3,35 @@
 include('html2pdf/html2pdf.class.php');
  
 /* Guardamos na variável $html o html que queremos converter.
- * Linha 13 - Incluímos o nosso arquivo css (exemploPdf.css)
- * Linha 15 - Temos uma div de id = logo que formatamos a mesma 
- *            com uma altura, largura, uma borda azul e uma imagem 
- *            de background.
- * Linha 16 - Temos agora um span de id = texto que formatamos 
- *            usando a fonte arial em negrito. */
+ * Linha 16 - Incluímos o nosso arquivo css (exemploPdf.css)
+ * 
+ * Para quebrar a página, basta envolver o conteúdo pretendido entre as tags <page></page>.
+ * Linha 18 - Configuramos apartir de onde o conteúdo irá começar, no caso 10mm topo, rodapé, esquerda e direita.
+ * Linha 19 - Informações que aparecem no topo da página.
+ * Linha 22 - Informações que aparecem no rodapé da página, no caso o número da página e o total de páginas.
+ * Linha 28 - Nova página que herda as configurações da página anterior.
+ * Linha 31 - Nova página que não herda as configurações da página anterior.
+ */
 $html = '
 <link rel="stylesheet" type="text/css" href="css/exemploPdf.css" />
- 
-<div id="logo"></div>
-<span id="texto">HTML2PDF</span>';
+
+<page backtop="10mm" backbottom="10mm" backleft="10mm" backright="10mm">
+	<page_header>
+		'.date('d/m/Y').'
+	</page_header>
+	<page_footer>
+		Página [[page_cu]]/[[page_nb]]
+	</page_footer>
+
+	Conteúdo da página.
+</page>
+<page pageset="old">
+	<span id="texto">Nova página que herda as configurações da página anterior.</span>
+</page>
+<page>
+	Nova página que não herda as configurações da página anterior.
+</page>';
+
 
 # Converte o html para pdf.
 try
