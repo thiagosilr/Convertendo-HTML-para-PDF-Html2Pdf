@@ -20,7 +20,7 @@ include('html2pdf/html2pdf.class.php');
 # Conexão mysql
 $host    = 'localhost';
 $usuario = 'root';
-$senha   = '';
+$senha   = 'root';
 $bancoDados = 'test';
 $conect = mysql_connect($host, $usuario, $senha);
 $db = mysql_select_db($bancoDados);
