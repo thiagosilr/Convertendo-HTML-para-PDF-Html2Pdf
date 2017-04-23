@@ -9,6 +9,7 @@ Exemplos
 
 * **exemploPdf.php** - Exemplo do tutorial;
 * **exemploTableLargura100Porcento.php** - Como colocar uma tabela com largura 100%;
-* **exemploImagemGeradaDinamicamente.php** - Como incorporar no PDF uma imagem gerada dinamicamente por scripts PHP.
-* **exemploHtmlExterno.php** - Como converter HTML passando apenas a URL do mesmo.
-* **exemploQuebraDePagina.php** - Como realizar a quebra de página no HTML2PDF.
+* **exemploImagemGeradaDinamicamente.php** - Como incorporar no PDF uma imagem gerada dinamicamente por scripts PHP;
+* **exemploHtmlExterno.php** - Como converter HTML passando apenas a URL do mesmo;
+* **exemploQuebraDePagina.php** - Como realizar a quebra de página no HTML2PDF;
+* **exemploEnviarPdfPorEmail.php** - Como enviar o PDF criado por e-mail. Esté exemplo utiliza a biblioteca PHPMailer.
